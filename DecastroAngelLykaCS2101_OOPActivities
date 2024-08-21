@@ -1,0 +1,31 @@
+import java.util.Scanner; 
+
+public class CompleteTask {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+
+     
+        System.out.println("Welcome to CS 211: Object-oriented Programming!");
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("This course will be fun, " + name + "!");
+        System.out.println("----------------------------");         
+     
+        System.out.println("\nMultiples of 7 with alternating tabs:");
+        for (int i = 1; i <= 5; i++) {
+            if (i % 2 == 0) {
+                System.out.println("\t" + (7 * i));
+            } else {
+                System.out.println(7 * i);
+            }
+        } 
+
+        System.out.println("----------------------------");
+        System.out.print("\nEnter a Celsius value: ");
+        double celsius = scanner.nextDouble();
+        double fahrenheit = (celsius * 9/5) + 32;
+        System.out.printf("%.2f Celsius is %.2f Fahrenheit%n", celsius, fahrenheit); 
+
+        scanner.close();
+    }
+}
